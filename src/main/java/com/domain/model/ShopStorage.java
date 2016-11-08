@@ -6,9 +6,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "shop_storage")
-public class ShopStorage {
+public class ShopStorage extends IdentifiableModel {
 
-    private Long id;
     private Movie movie;
     private Shop shop;
     private List<UserOrderItem> userOrderItems = new ArrayList<UserOrderItem>();
@@ -16,16 +15,6 @@ public class ShopStorage {
     private int count;
 
     public ShopStorage() {
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     @ManyToOne

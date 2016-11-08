@@ -6,25 +6,14 @@ import java.util.List;
 
 @Entity
 @Table(name = "shop")
-public class Shop {
+public class Shop extends IdentifiableModel {
 
-    private Long id;
     private List<ShopStorage> shopStorages = new ArrayList<ShopStorage>();
 
     private String name;
 
-    public Shop(){
+    public Shop() {
 
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     @OneToMany(mappedBy = "shop")

@@ -8,9 +8,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "movie")
-public class Movie {
+public class Movie extends IdentifiableModel {
 
-    private Long id;
     private List<ShopStorage> shopStorages = new ArrayList<ShopStorage>();
 
     private String name;
@@ -21,12 +20,6 @@ public class Movie {
     public Movie() {
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long getId() {
-        return id;
-    }
-
     @OneToMany(mappedBy = "movie")
     public List<ShopStorage> getShopStorages() {
         return shopStorages;
@@ -34,10 +27,6 @@ public class Movie {
 
     public void setShopStorages(List<ShopStorage> shopStorages) {
         this.shopStorages = shopStorages;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {

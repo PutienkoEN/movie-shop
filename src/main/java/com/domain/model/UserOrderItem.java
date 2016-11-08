@@ -4,24 +4,13 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "user_order_item")
-public class UserOrderItem {
+public class UserOrderItem extends IdentifiableModel{
 
-    private Long id;
     private UserOrder userOrder;
     private ShopStorage shopStorage;
     private int count;
 
     public UserOrderItem() {
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     @ManyToOne

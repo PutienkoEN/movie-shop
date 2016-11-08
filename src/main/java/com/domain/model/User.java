@@ -7,27 +7,17 @@ import java.util.PrimitiveIterator;
 
 @Entity
 @Table(name = "user")
-public class User {
+public class User extends IdentifiableModel{
 
-    private Long id;
     private List<UserOrder> orders = new ArrayList<UserOrder>();
     private int money;
     private String login;
     private String password;
     private String email;
     private String country;
+    private String role;
 
     public User() {
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     @OneToMany(mappedBy = "user")
@@ -77,5 +67,13 @@ public class User {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
