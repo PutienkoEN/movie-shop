@@ -1,6 +1,6 @@
 package com.domain.dao;
 
-import java.io.Serializable;
+import java.util.List;
 
 public interface GenericDao<T> {
     void create(T newInstance);
@@ -10,4 +10,6 @@ public interface GenericDao<T> {
     void update(T transientObject);
 
     void delete(T persistentObject);
+
+    List<T> getAll();
 }

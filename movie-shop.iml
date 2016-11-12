@@ -32,7 +32,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.34" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.3.0.Final" level="project" />
@@ -46,5 +45,6 @@
     <orderEntry type="library" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.0.Final" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
   </component>
 </module>
